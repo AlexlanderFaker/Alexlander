@@ -53,7 +53,7 @@ public class DishController {
      * @param name
      * @return
      */
-    @GetMapping("/page")
+    @GetMapping("/page1111")
     public R<Page> page(int page, int pageSize, String name) {
 
         Page<Dish> pageInfo = new Page<>(page, pageSize);
