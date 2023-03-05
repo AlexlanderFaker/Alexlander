@@ -5,12 +5,18 @@ function loginApi(data) {
       data
     })
   }
-
-function loginoutApi() {
+function loginOutApi() {
   return $axios({
     'url': '/user/loginout',
     'method': 'post',
   })
+}
+function sendMsgApi(data) {
+    return $axios({
+        'url': '/user/sendMsg',
+        'method': 'post',
+        data
+    })
 }
 
   
