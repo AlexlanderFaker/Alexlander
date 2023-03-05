@@ -7,4 +7,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 public interface SetmealService extends IService<Setmeal> {
     public void saveWithDish(SetmealDto setmealDto);
+
+    public void removeWithDish(Long[] ids);
+    //public void updateWithDish(SetmealDto setmealDto);
 }
