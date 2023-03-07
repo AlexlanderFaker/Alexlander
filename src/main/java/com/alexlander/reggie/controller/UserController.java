@@ -28,7 +28,7 @@ public class UserController {
 
     /**
      * 发送短信验证码
-     *hh
+     *
      * @param user
      * @param session
      * @return
