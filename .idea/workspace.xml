@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16823ec1-c1f3-4c99-8d06-2e13b583d1bd" name="Default Changelist" comment="2023-3-5/23:35">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/AddressBookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/OrdersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/OrdersDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/ShoppingCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/entity/AddressBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/entity/OrderDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/entity/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/entity/ShoppingCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/mapper/AddressBookMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/mapper/OrderDetailMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/mapper/OrdersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/mapper/ShoppingCartMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/AddressBookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/OrderDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/OrdersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/ShoppingCartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/impl/AddressBookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/impl/OrderDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/impl/OrdersServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/front/cartData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/StemealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/StemealController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alexlander/reggie/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/api/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/api/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/alexlander/reggie/controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/alexlander/reggie/controller/DishController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/front/api/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/front/api/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,10 +263,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1677580020337" />
-    <state width="433" height="305" key="Git.Branch.Popup" timestamp="1678030580455">
+    <state width="437" height="309" key="Git.Branch.Popup" timestamp="1678199026515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="433" height="305" key="Git.Branch.Popup/0.0.1920.1040@0.0.1920.1040" timestamp="1678030580455" />
+    <state width="437" height="309" key="Git.Branch.Popup/0.0.1920.1040@0.0.1920.1040" timestamp="1678199026515" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1678167357305">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
