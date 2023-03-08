@@ -14,10 +14,13 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -37,6 +40,9 @@ public class StemealController {
     @Autowired
     private CategoryService categoryService;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
     /**
      * 新增套餐
      *
@@ -47,6 +53,8 @@ public class StemealController {
     public R<String> save(@RequestBody SetmealDto setmealDto) {
         log.info("新增套餐信息：{}", setmealDto);
         setmealService.saveWithDish(setmealDto);
+        Set keys = redisTemplate.keys("setmal_*");
+        redisTemplate.delete(keys);
         return R.success("新增套餐成功！");
     }
 
@@ -143,6 +151,9 @@ public class StemealController {
         }
         setmealDishService.saveBatch(setmealDishes);
         setmealService.updateById(setmealDto);
+
+        Set keys = redisTemplate.keys("setmal_*");
+        redisTemplate.delete(keys);
         return R.success("套餐修改成功");
     }
 
@@ -189,11 +200,18 @@ public class StemealController {
      */
     @GetMapping("/list")
     public R<List<Setmeal>> list(Setmeal setmeal) {
+        List<Setmeal> list = null;
+        String key = "setmal_" + setmeal.getCategoryId() + "_1";
+        list = (List<Setmeal>) redisTemplate.opsForValue().get(key);
+        if (list != null) {
+            return R.success(list);
+        }
         LambdaQueryWrapper<Setmeal> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(setmeal.getCategoryId() != null, Setmeal::getCategoryId, setmeal.getCategoryId());
         queryWrapper.eq(setmeal.getStatus() != null, Setmeal::getStatus, setmeal.getStatus());
         queryWrapper.orderByDesc(Setmeal::getUpdateTime);
-        List<Setmeal> list = setmealService.list(queryWrapper);
+        list = setmealService.list(queryWrapper);
+        redisTemplate.opsForValue().set(key, list, 60, TimeUnit.MINUTES);
         return R.success(list);
     }
 }
