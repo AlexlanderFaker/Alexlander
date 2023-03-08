@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Slf4j
@@ -21,7 +22,9 @@ public class AddressBookController {
     private AddressBookService addressBookService;
 
     /**
-     * 新增
+     * 新增用户地址
+     * @param addressBook
+     * @return
      */
     @PostMapping
     public R<AddressBook> save(@RequestBody AddressBook addressBook) {
@@ -33,6 +36,8 @@ public class AddressBookController {
 
     /**
      * 设置默认地址
+     * @param addressBook
+     * @return
      */
     @PutMapping("default")
     public R<AddressBook> setDefault(@RequestBody AddressBook addressBook) {
@@ -51,6 +56,8 @@ public class AddressBookController {
 
     /**
      * 根据id查询地址
+     * @param id
+     * @return
      */
     @GetMapping("/{id}")
     public R get(@PathVariable Long id) {
@@ -64,6 +71,7 @@ public class AddressBookController {
 
     /**
      * 查询默认地址
+     * @return
      */
     @GetMapping("default")
     public R<AddressBook> getDefault() {
@@ -82,7 +90,9 @@ public class AddressBookController {
     }
 
     /**
-     * 查询指定用户的全部地址
+     * 查询用户所有地址
+     * @param addressBook
+     * @return
      */
     @GetMapping("/list")
     public R<List<AddressBook>> list(AddressBook addressBook) {
@@ -98,4 +108,15 @@ public class AddressBookController {
         return R.success(addressBookService.list(queryWrapper));
     }
 
+    /**
+     * 用户删除地址
+     * @param ids
+     * @return
+     */
+    @DeleteMapping
+    public R<String> remove(Long[] ids){
+        List<Long> longs = Arrays.asList(ids);
+        addressBookService.removeByIds(longs);
+        return R.success("删除成功！");
+    }
 }
